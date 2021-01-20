@@ -26,7 +26,6 @@ const App = ({ }) => {
           }
         })
     } catch (err) {
-      console.log('*----')
       if (err.response.status === 404) {
         url = "https://deckofcardsapi.com/api/deck/new/draw/?count=1"
         await axios.get(url)
@@ -93,8 +92,8 @@ const App = ({ }) => {
     <View style={styles.container}>
       {/* CARD 1 */}
       <TouchableOpacity onPress={() => {
-        animateMe('first')
         getCard('first')
+        animateMe('first')
 
       }} style={styles.cardWrapper}>
         {
@@ -115,8 +114,8 @@ const App = ({ }) => {
       </TouchableOpacity>
       {/* CARD 2 */}
       <TouchableOpacity onPress={() => {
-        animateMe('second')
         getCard('second')
+        animateMe('second')
       }} style={styles.cardWrapper}>
         {
           !showSecondFace
